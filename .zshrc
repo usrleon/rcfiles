@@ -88,13 +88,13 @@ RPROMPT='(%D{%H:%M})%{$fg_bold[cyan]%}$(git_prompt_info)%{$fg_bold[red]%}%(?..[%
 
 
 export PATH="${HOME}/bin:${PATH}"
-autoload -Uz compinit
-compinit
 # End of lines added by compinstall
 # The following lines were added by compinstall
 
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu select=5
+zstyle ':completion:*:*:kill:*' menu yes select
+zstyle ':completion:*:kill:*' force-list always
 #zstyle ':completion:*' original true
 #zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 #zstyle :compinstall filename '/home/leon/.zshrc'
@@ -114,6 +114,8 @@ alias cssh='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '
 
 # fix keys
 bindkey -e
+bindkey '^[[A' up-line-or-search
+bindkey '^[[B' down-line-or-search
 case "$TERM" in
 	screen*)
                 bindkey '\e[1~' beginning-of-line       # Home
