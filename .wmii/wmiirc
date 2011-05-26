@@ -23,7 +23,7 @@ export WMII_BACKGROUND='#333333'
 export WMII_FONT='xft:DejaVu Sans Mono-10'
 
 set -- $(echo $WMII_NORMCOLORS $WMII_FOCUSCOLORS)
-export WMII_TERM="gnome-terminal --hide-menubar"
+export WMII_TERM="gnome-terminal"
 
 # Menu history
 hist="${WMII_CONFPATH%%:*}/history"
@@ -32,12 +32,15 @@ histnum=5000
 # Column Rules
 wmiir write /colrules <<!
 /gimp/ -> 17+83+41
-/.*/ -> 62+38 # Golden Ratio
+/.*/ -> 50+50 # Golden Ratio
 !
 
 # Tagging Rules
 wmiir write /tagrules <<!
 /MPlayer|VLC/ -> ~
+/skype/ -> skype
+/emphaty/ -> icq
+/firefox|chromium-browser/ -> web
 !
 
 # Status Bar Info
@@ -192,7 +195,22 @@ Key $MODKEY-p      # Open program menu
 	eval wmiir setsid "$(wimenu -h "${hist}.progs" -n $histnum <$progsfile)" &
 
 Key $MODKEY-Return # Launch a terminal
-	eval wmiir setsid $WMII_TERM &
+	eval wmiir setsid $WMII_TERM "--hide-menubar"&
+
+
+Key $MODKEY-w # next tag
+        seltag=$(wmiir read /tag/sel/ctl | head -1)
+        (next_tag=$(wi_tags | grep $seltag -A1 | tail -1) && wmiir xwrite /ctl view $next_tag)
+Key $MODKEY-q # prev tag
+        seltag=$(wmiir read /tag/sel/ctl | head -1)
+        (next_tag=$(wi_tags | grep $seltag -B1 | head -1) && wmiir xwrite /ctl view $next_tag)
+#!
+#for i in 1 2 3 4 5 6 7 8 ; do
+#        cat <<!
+#Key $MODKEY-F$i # Move to the numbered view
+#        tag=$(wi_tags | head -$i | tail -1)
+#	wmiir xwrite /ctl view $tag
+#!
 
 KeyGroup Other
 Key $MODKEY-Control-t # Toggle all other key bindings
@@ -218,6 +236,8 @@ Key $MODKEY-$i		 # Move to the numbered view
 	wmiir xwrite /ctl view "$i"
 Key $MODKEY-Shift-$i     # Retag selected client with the numbered tag
 	wmiir xwrite /client/sel/tags "$i"
+Key $MODKEY-F$i # Move to the numbered view
+	wmiir xwrite /ctl view $(wi_tags | head -$i | tail -1)
 !
 	done
 }
