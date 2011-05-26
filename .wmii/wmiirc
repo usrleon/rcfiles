@@ -32,20 +32,21 @@ histnum=5000
 # Column Rules
 wmiir write /colrules <<!
 /gimp/ -> 17+83+41
+/skype|empathy/ -> 10+90
 /.*/ -> 50+50 # Golden Ratio
 !
 
 # Tagging Rules
 wmiir write /tagrules <<!
 /MPlayer|VLC/ -> ~
-/skype/ -> skype
-/emphaty/ -> icq
+/skype/ -> im
+/empathy/ -> im
 /firefox|chromium-browser/ -> web
 !
 
 # Status Bar Info
 status() {
-	echo -n $(uptime | sed 's/.*://; s/,//g') '|' $(date +"%H:%m %d-%m-%Y")
+	echo -n $(date +"%H:%m %d-%m-%Y")
 }
 
 local_events() { true;}
@@ -211,12 +212,12 @@ Key $MODKEY-Control-t # Toggle all other key bindings
 	esac
 
 KeyGroup Tag actions
-Key $MODKEY-w # next tag
-        seltag=$(wmiir read /tag/sel/ctl | head -1)
-        (next_tag=$(wi_tags | grep $seltag -A1 | tail -1) && wmiir xwrite /ctl view $next_tag)
-Key $MODKEY-q # prev tag
+Key $MODKEY-Control-$LEFT # prev tag
         seltag=$(wmiir read /tag/sel/ctl | head -1)
         (next_tag=$(wi_tags | grep $seltag -B1 | head -1) && wmiir xwrite /ctl view $next_tag)
+Key $MODKEY-Control-$RIGHT # next tag
+        seltag=$(wmiir read /tag/sel/ctl | head -1)
+        (next_tag=$(wi_tags | grep $seltag -A1 | tail -1) && wmiir xwrite /ctl view $next_tag)
 Key $MODKEY-t       # Change to another tag
 	(tag=$(wi_tags | wimenu -h "${hist}.tags" -n 50) && wmiir xwrite /ctl view $tag) &
 Key $MODKEY-Shift-t # Retag the selected client
@@ -230,7 +231,7 @@ Key $MODKEY-$i		 # Move to the numbered view
 Key $MODKEY-Shift-$i     # Retag selected client with the numbered tag
 	wmiir xwrite /client/sel/tags "$i"
 Key $MODKEY-F$i # Move to the ordered number view
-	wmiir xwrite /ctl view $(wi_tags | head -$i | tail -1)
+	wmiir xwrite /ctl view `wi_tags | head -$i | tail -1`
 !
 	done
 }
