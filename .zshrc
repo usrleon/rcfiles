@@ -60,7 +60,7 @@ function cdp () {
 
 setopt LOCAL_OPTIONS # allow functions to have local options
 setopt LOCAL_TRAPS # allow functions to have local traps
-setopt CORRECT_ALL
+#setopt CORRECT_ALL
 
 #autoload -U ~/.zsh/functions/*(:t)
 autoload colors zsh/terminfo
@@ -80,11 +80,8 @@ setopt prompt_subst
 #PROMPT='%{$fg_bold[green]%}%n@%m %{$fg[blue]%}%c %{$fg_bold[red]%}$(git_prompt_info)%{$fg[blue]%} %% %{$reset_color%}'
 #PROMPT='(%D{%H:%M}) %n@%m:%~%{$fg_bold[cyan]%}$(git_prompt_info)%{$reset_color%} %#> ' #%% ' # %{$reset_color%}'
 PROMPT='%n@%m:%~%# '
-#RPROMPT='(%D{%H:%M})%{$fg_bold[red]%}%(?..[%B%?%b])%{$reset_color%}'
 RPROMPT='(%D{%H:%M})%{$fg_bold[cyan]%}$(git_prompt_info)%{$fg_bold[red]%}%(?..[%?])%{$reset_color%}'
 
-#PS1="(%D{%H:%M}) %n@$terminfo[bold]$fg[white]%m$terminfo[sgr0]:%~ %#> "
-#print "$terminfo[bold]$fg[white]Welcome$terminfo[sgr0] to man zsh-lovers"
 
 
 export PATH="${HOME}/bin:${PATH}"
@@ -95,9 +92,9 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu select=5
 zstyle ':completion:*:*:kill:*' menu yes select
 zstyle ':completion:*:kill:*' force-list always
-#zstyle ':completion:*' original true
-#zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-#zstyle :compinstall filename '/home/leon/.zshrc'
+zstyle ':completion:*:processes' command 'ps xuf'
+zstyle ':completion:*:processes' sort false
+zstyle ':completion:*:processes-names' command 'ps xho command'
 
 autoload -Uz compinit
 compinit
