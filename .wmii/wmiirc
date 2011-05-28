@@ -16,11 +16,18 @@ noticetimeout=5
 noticebar=/rbar/!notice
 
 # Colors tuples: "<text> <background> <border>"
-export WMII_NORMCOLORS='#cccccc #004050 #002030'
-export WMII_FOCUSCOLORS='#fefefe #307080 #5090a0'
+# crystal shining style
+#export WMII_NORMCOLORS='#fefefe #004050 #002030'
+#export WMII_FOCUSCOLORS='#fefefe #307080 #5090a0'
+
+# anthrazit style custom
+export WMII_FOCUSCOLORS='#eeeeee #506070 #708090'
+export WMII_NORMCOLORS='#bbbbbb #203040 #000000'
+
 export WMII_BACKGROUND='#333333'
 
-export WMII_FONT='xft:DejaVu Sans Mono-10'
+#export WMII_FONT='xft:DejaVu Sans Mono-10'
+export WMII_FONT='xft:Ubuntu-10'
 
 set -- $(echo $WMII_NORMCOLORS $WMII_FOCUSCOLORS)
 export WMII_TERM="gnome-terminal"
@@ -39,14 +46,15 @@ wmiir write /colrules <<!
 # Tagging Rules
 wmiir write /tagrules <<!
 /MPlayer|VLC/ -> ~
-/skype/ -> im
-/empathy/ -> im
+/skype|empathy|pidgin/ -> im
 /firefox|chromium-browser/ -> web
+/www\.accuradio\.com\/player\// -> radio
+/gnome-terminal/ -> sel
 !
 
 # Status Bar Info
 status() {
-	echo -n $(date +"%H:%m %d-%m-%Y")
+	echo -n "$(date +"%H:%m %d-%m-%Y") | Vol.:$(amixer get Master | tail -1 | awk '{print $4}' | sed -e 's/\[//;s/\]//') | $(id -un)"
 }
 
 local_events() { true;}
@@ -124,14 +132,21 @@ Event LeftBarMouseDown
 	wi_fnmenu LBar "$@" &
 
 # Actions
+Action +vol
+	amixer set Master "$@%+"
+Action -vol
+	amixer set Master "$@%-"
+Action vol
+	amixer set Master "$@%"
+
 Action showkeys
 	echo "$KeysHelp" | xmessage -file - -fn ${WMII_FONT%%,*}
 Action quit
 	wmiir xwrite /ctl quit
 Action exec
 	wmiir xwrite /ctl exec "$@"
-Action rehash
-	wi_proglist $PATH >$progsfile
+#Action rehash
+#	wi_proglist $PATH >$progsfile
 Action status
 	set +xv
 	if wmiir remove /rbar/status 2>/dev/null; then
@@ -143,6 +158,12 @@ Action status
 	done
 
 # Key Bindings
+KeyGroup User custom
+Key $MODKEY-Next
+        amixer set Master 5-
+Key $MODKEY-Prior
+        amixer set Master 5+
+
 KeyGroup Moving around
 Key $MODKEY-$LEFT   # Select the client to the left
 	wmiir xwrite /tag/sel/ctl select left
@@ -196,7 +217,7 @@ Key $MODKEY-p      # Open program menu
 	eval wmiir setsid "$(wimenu -h "${hist}.progs" -n $histnum <$progsfile)" &
 
 Key $MODKEY-Return # Launch a terminal
-	eval wmiir setsid $WMII_TERM "--hide-menubar"&
+	eval wmiir setsid $WMII_TERM "--hide-menubar --disable-factory"&
 
 
 
@@ -218,6 +239,7 @@ Key $MODKEY-Control-$LEFT # prev tag
 Key $MODKEY-Control-$RIGHT # next tag
         seltag=$(wmiir read /tag/sel/ctl | head -1)
         (next_tag=$(wi_tags | grep $seltag -A1 | tail -1) && wmiir xwrite /ctl view $next_tag)
+
 Key $MODKEY-t       # Change to another tag
 	(tag=$(wi_tags | wimenu -h "${hist}.tags" -n 50) && wmiir xwrite /ctl view $tag) &
 Key $MODKEY-Shift-t # Retag the selected client
@@ -230,10 +252,14 @@ Key $MODKEY-$i		 # Move to the numbered view
 	wmiir xwrite /ctl view "$i"
 Key $MODKEY-Shift-$i     # Retag selected client with the numbered tag
 	wmiir xwrite /client/sel/tags "$i"
-Key $MODKEY-F$i # Move to the ordered number view
-	wmiir xwrite /ctl view `wi_tags | head -$i | tail -1`
 !
 	done
+        for j in 1 2 3 4 5 6 7 8; do
+                cat <<EOF
+Key $MODKEY-F$j # Move to the ordered number view
+	wmiir xwrite /ctl view \`wi_tags | head -$j | tail -1\`
+EOF
+        done
 }
 wi_events events local_events
 
