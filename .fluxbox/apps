@@ -1,0 +1,11 @@
+[startup] {fbxkb}
+[app] (name=fbrun)
+  [Position]	(CENTER)	{0 0}
+  [Layer]	{2}
+[end]
+[app] (empathy) (role=contact_list)
+  [FocusHidden] {yes}
+[end]
+[group]
+  [app] (skype)
+[end]

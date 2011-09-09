@@ -1,0 +1,7 @@
+x11-terms/terminator -cups
+x11-libs/gtk+ -cups
+net-p2p/bittorrent -gtk
+app-misc/mc -X
+net-im/pidgin -gstreamer -xscreensaver
+#required by www-client/firefox-6.0, required by =firefox-6.0 (argument)
+=media-libs/libpng-1.4.8 apng

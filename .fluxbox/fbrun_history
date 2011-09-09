@@ -1,0 +1,25 @@
+gvim
+gnome-terminal
+fbxkb
+empathy
+skypr
+vlock
+~/src/skype-notify/skype-dbus-service.py
+google-chrome
+nautilus
+gnome-calculator
+gnome-screensaver-command -a
+skype
+asoundconf-gtk
+rdesktop
+rdesktop quinix
+rdesktop quinyx
+rdesktop -f quinyx 
+terminator
+terminal
+firefox
+xkill
+pidgin
+transmission
+transmission-gtk
+xmodmap
