@@ -3,23 +3,38 @@
 #
 
 # rc files list
-BASE=~/.vim/ ~/.vimrc ~/.screenrc ~/.zshrc ~/.gitconfig
-WMII=~/.wmii/
+BASE=.vim/ .vimrc .screenrc .zshrc .gitconfig
+WMII=.wmii/
+FLUX=.fluxbox/
 
-GET=$(BASE) $(WMII)
+# global configs
+GMAKE=/etc/make.conf
+GPORT=/etc/portage/
 
-all : base wmii
+USER=$(BASE) $(WMII) $(FLUX)
+SYS=$(GMAKE) $(GPORT)
+
+all : base sys wmii fluxbox
 
 get : 
-	for RC in $(GET); do \
-		[ -e $$RC ] && cp -r $$RC .; \
+	for RC in $(USER); do \
+		[ -e ~/$$RC ] && cp -ar ~/$$RC .; \
+	done
+	for GC in $(SYS); do \
+		[ -e $$GC ] && cp -ar $$GC .; \
 	done
 
 base :
-	cp -r $(BASE) ~
-
+	cp -ar $(BASE) ~/
+sys  :
+	for GC in $(SYS); do \
+		[ -e ~/$$GC ] && cp -ar $$GC .; \
+	done
+	cp -ar `basename $(GMAKE)` $(GMAKE)
 wmii :
-	cp -r $(WMII) ~/
+	cp -ar $(WMII) ~/
+flux :
+	cp -ar $(FLUX) ~/
 
 list :
 	echo "all\nget\n"

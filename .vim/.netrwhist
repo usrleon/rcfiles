@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/leon'
 let g:netrw_dirhist_2='/home'
 let g:netrw_dirhist_3='/'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/opt/nova'
 let g:netrw_dirhist_6='/home/leon/.vim/plugin'
 let g:netrw_dirhist_7='/opt/api-project-id/nova/tests/api/openstack'
 let g:netrw_dirhist_8='/usr/share/ganglia-webfrontend'
+let g:netrw_dirhist_9='/usr/share/fluxbox/styles/bloe'

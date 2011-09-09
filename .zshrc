@@ -84,7 +84,7 @@ RPROMPT='(%D{%H:%M})%{$fg_bold[cyan]%}$(git_prompt_info)%{$fg_bold[red]%}%(?..[%
 
 
 
-export PATH="${HOME}/bin:${PATH}"
+export PATH="/usr/local/sbin:/usr/local/bin:${HOME}/bin:${PATH}"
 # End of lines added by compinstall
 # The following lines were added by compinstall
 
@@ -117,6 +117,12 @@ case "$TERM" in
 	screen*)
                 bindkey '\e[1~' beginning-of-line       # Home
                 bindkey '\e[4~' end-of-line		# End
+                bindkey '\e[3~'	delete-char		# Del
+		bindkey '\e[2~' overwrite-mode          # Insert
+        ;;
+        xterm)
+                bindkey '\eOH' beginning-of-line       # Home
+                bindkey '\eOF' end-of-line		# End
                 bindkey '\e[3~'	delete-char		# Del
 		bindkey '\e[2~' overwrite-mode          # Insert
 	;;
