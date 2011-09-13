@@ -46,7 +46,7 @@ case $uname in
 esac
 
 git_prompt_info() {
-	ref=$(git-symbolic-ref HEAD 2> /dev/null) || return
+	ref=$(git symbolic-ref HEAD 2> /dev/null) || return
 	echo "[${ref#refs/heads/}]"
 }
 
@@ -84,7 +84,8 @@ RPROMPT='(%D{%H:%M})%{$fg_bold[cyan]%}$(git_prompt_info)%{$fg_bold[red]%}%(?..[%
 
 
 
-export PATH="/usr/local/sbin:/usr/local/bin:${HOME}/bin:${PATH}"
+export PATH="/sbin:/usr/sbin:/usr/local/sbin:${HOME}/bin:${PATH}"
+export PATH="/usr/games/bin:${PATH}"
 # End of lines added by compinstall
 # The following lines were added by compinstall
 
@@ -121,7 +122,7 @@ case "$TERM" in
 		bindkey '\e[2~' overwrite-mode          # Insert
         ;;
         xterm)
-                bindkey '\eOH' beginning-of-line       # Home
+                bindkey '\eOH' beginning-of-line        # Home
                 bindkey '\eOF' end-of-line		# End
                 bindkey '\e[3~'	delete-char		# Del
 		bindkey '\e[2~' overwrite-mode          # Insert

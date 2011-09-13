@@ -10,9 +10,10 @@ FLUX=.fluxbox/
 # global configs
 GMAKE=/etc/make.conf
 GPORT=/etc/portage/
+VEDRO=/usr/src/linux/.config
 
 USER=$(BASE) $(WMII) $(FLUX)
-SYS=$(GMAKE) $(GPORT)
+SYS=$(GMAKE) $(GPORT) $(VEDRO)
 
 all : base sys wmii fluxbox
 
@@ -30,7 +31,6 @@ sys  :
 	for GC in $(SYS); do \
 		[ -e ~/$$GC ] && cp -ar $$GC .; \
 	done
-	cp -ar `basename $(GMAKE)` $(GMAKE)
 wmii :
 	cp -ar $(WMII) ~/
 flux :

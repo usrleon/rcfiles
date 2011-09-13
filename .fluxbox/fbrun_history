@@ -23,3 +23,8 @@ pidgin
 transmission
 transmission-gtk
 xmodmap
+xtrlock
+limit | xmessage -file -
+fire
+dropbox
+reboot
