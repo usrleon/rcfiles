@@ -1,0 +1,6 @@
+#required by skype (argument)
+>=net-im/skype-2.2.0.35-r1 ~x86
+#required by =firefox-6.0 (argument)
+>=www-client/firefox-6.0 ~x86
+#required by dropbox (argument)
+>=net-misc/dropbox-1.2.24 ~x86

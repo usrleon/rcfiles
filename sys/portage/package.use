@@ -1,0 +1,18 @@
+x11-terms/terminator -cups
+x11-libs/gtk+ -cups
+net-p2p/bittorrent -gtk
+app-misc/mc -X
+net-im/pidgin -gstreamer -xscreensaver
+dev-vcs/git -gtk bash-completion
+#required by www-client/firefox-6.0, required by =firefox-6.0 (argument)
+=media-libs/libpng-1.4.8 apng
+#required by media-gfx/splashutils-1.5.4.3-r3[mng], required by splashutils (argument)
+>=media-libs/lcms-1.19:0 static-libs
+#required by media-gfx/splashutils-1.5.4.3-r3, required by splashutils (argument)
+>=virtual/jpeg-0 static-libs
+#required by virtual/jpeg-0, required by media-gfx/splashutils-1.5.4.3-r3, required by splashutils (argument)
+>=media-libs/libjpeg-turbo-1.1.1 static-libs
+#required by media-gfx/splashutils-1.5.4.3-r3[png], required by splashutils (argument)
+=media-libs/libpng-1.4.8 static-libs
+#required by media-gfx/splashutils-1.5.4.3-r3[truetype], required by splashutils (argument)
+>=media-libs/freetype-2.4.6 static-libs

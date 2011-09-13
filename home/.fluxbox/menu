@@ -1,0 +1,6 @@
+[begin] (fluxbox)
+[include] (~/.fluxbox/defaultmenu)
+[submenu] (Keyboard layout)
+[exec] (us) {setxkbmap us}
+[exec] (ru) {setxkbmap ru}
+[end]

@@ -3,11 +3,13 @@
 #
 
 # rc files list
-BASE=.vim/ .vimrc .screenrc .zshrc .gitconfig
+USRDIST=home/
+BASE=.vim/ .vimrc .screenrc .zshrc .gitconfig .config/
 WMII=.wmii/
 FLUX=.fluxbox/
 
 # global configs
+SYSDIST=sys/
 GMAKE=/etc/make.conf
 GPORT=/etc/portage/
 VEDRO=/usr/src/linux/.config
@@ -19,22 +21,22 @@ all : base sys wmii fluxbox
 
 get : 
 	for RC in $(USER); do \
-		[ -e ~/$$RC ] && cp -ar ~/$$RC .; \
+		[ -e ~/$$RC ] && cp -ar ~/$$RC $(USRDIST); \
 	done
 	for GC in $(SYS); do \
-		[ -e $$GC ] && cp -ar $$GC .; \
+		[ -e $$GC ] && cp -ar $$GC $(SYSDIST); \
 	done
 
 base :
 	cp -ar $(BASE) ~/
 sys  :
 	for GC in $(SYS); do \
-		[ -e ~/$$GC ] && cp -ar $$GC .; \
+		[ -e ~/$$GC ] && cp -ar $$GC $(SYSDIST); \
 	done
 wmii :
-	cp -ar $(WMII) ~/
+	cp -ar $(USRDIST)$(WMII) ~/
 flux :
-	cp -ar $(FLUX) ~/
+	cp -ar $(USRDIST)$(FLUX) ~/
 
 list :
 	echo "all\nget\n"
