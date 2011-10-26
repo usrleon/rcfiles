@@ -1,0 +1,134 @@
+{
+   "browser": {
+      "window_placement": {
+         "bottom": 1030,
+         "left": 0,
+         "maximized": true,
+         "right": 825,
+         "top": 30,
+         "work_area_bottom": 1050,
+         "work_area_left": 0,
+         "work_area_right": 1680,
+         "work_area_top": 30
+      }
+   },
+   "countryid_at_install": 21077,
+   "default_search_provider": {
+      "enabled": true,
+      "encodings": "UTF-8",
+      "icon_url": "http://www.google.com/favicon.ico",
+      "id": "2",
+      "instant_url": "{google:baseURL}webhp?{google:RLZ}sourceid=chrome-instant&ie={inputEncoding}&ion=1{searchTerms}&nord=1",
+      "keyword": "google.ru",
+      "name": "Google",
+      "prepopulate_id": "1",
+      "search_url": "{google:baseURL}search?{google:RLZ}{google:acceptedSuggestion}{google:originalQueryForSuggestion}sourceid=chrome&ie={inputEncoding}&q={searchTerms}",
+      "suggest_url": "{google:baseSuggestURL}search?client=chrome&hl={language}&q={searchTerms}"
+   },
+   "dns_prefetching": {
+      "host_referral_list": [ 2, [ "http://ad-emea.doubleclick.net/", [ "http://ad-emea.doubleclick.net/", 0.34203658823452426, "http://s0.2mdn.net/", 0.47303523469447695, "http://www.youtube.com/", 1.1870596640021336 ] ], [ "http://ad.adriver.ru/", [ "http://ad.adriver.ru/", 1.548113842144225, "http://edp1.adriver.ru/", 1.3517113397826443, "http://masterh6.adriver.ru/", 1.3517113397826443, "http://openstat.net/", 1.3517113397826443, "http://www.tns-counter.ru/", 1.9409188468673864 ] ], [ "http://ad.rambler.ru/", [ "http://ad.adriver.ru/", 0.07284323612531411, "http://ar.tns-counter.ru/", 0.07556741177200439, "http://images.rambler.ru/", 0.07284323612531411, "http://img.lenta.ru/", 0.6516603665079646, "http://img.ts.lenta.ru/", 0.9510053627289821, "http://ts.lenta.ru/", 0.5816032174108875 ] ], [ "http://gmail.com/", [ "https://accounts.google.com/", 0.8921294842565451, "https://gmail.com/", 1.0885319866181258, "https://mail.google.com/", 1.2849344889797065, "https://www.google.com/", 0.8921294842565451 ] ], [ "http://googleads.g.doubleclick.net/", [ "http://bs.serving-sys.com/", 0.45596187969518265, "http://ds.serving-sys.com/", 0.39784228089849616, "http://google.com/", 0.6421007555487322, "http://googleads.g.doubleclick.net/", 0.6421007555487322, "http://pagead2.googlesyndication.com/", 1.2294672508099367, "https://googleads.g.doubleclick.net/", 0.6421007555487322 ] ], [ "http://lenta.ru/", [ "http://ad.adriver.ru/", 1.474060504014537, "http://ad.rambler.ru/", 2.257958320764831, "http://counter.rambler.ru/", 1.474060504014537, "http://counter.yadro.ru/", 1.474060504014537, "http://garu.hit.gemius.pl/", 1.474060504014537, "http://images.rambler.ru/", 1.474060504014537, "http://img.lenta.ru/", 3.810496545637904, "http://mc.yandex.ru/", 5.876900794592313, "http://stat-ref.lenta.ru/", 0.9728799326495942, "http://www.google-analytics.com/", 2.116599698072155 ] ], [ "http://masterh6.adriver.ru/", [ "http://masterh6.adriver.ru/", 1.548113842144225 ] ], [ "http://p2.myoxob2otg534.sdgg3hkg52ikccu5.if.v4.ipv6-exp.l.google.com/", [ "http://p2.myoxob2otg534.sdgg3hkg52ikccu5.531264.i1.ds.ipv6-exp.l.google.com/", 1.474060504014537, "http://p2.myoxob2otg534.sdgg3hkg52ikccu5.531264.i2.v4.ipv6-exp.l.google.com/", 1.474060504014537, "http://p2.myoxob2otg534.sdgg3hkg52ikccu5.531264.s1.v4.ipv6-exp.l.google.com/", 1.474060504014537 ] ], [ "http://s.ytimg.com/", [ "http://googleads.g.doubleclick.net/", 2.232740166719616, "http://i3.ytimg.com/", 4.8491798991215465, "http://o-o.preferred.dfw06g01.v16.nonxt3.c.youtube.com/", 1.474060504014537, "http://o-o.preferred.dfw06g01.v22.lscache6.c.youtube.com/", 1.474060504014537, "http://s.youtube.com/", 20.563680580559137, "http://s.ytimg.com/", 9.856050106414708, "http://s0.2mdn.net/", 9.187947118640786, "http://s2.youtube.com/", 3.535919760777234, "http://v8.lscache2.c.youtube.com/", 1.474060504014537, "http://www.youtube.com/", 18.19990631501176 ] ], [ "http://tools.google.com/", [ "http://fonts.googleapis.com/", 1.548113842144225, "http://themes.googleusercontent.com/", 1.548113842144225, "http://tools.google.com/", 2.3337238515905483, "http://www.google-analytics.com/", 1.548113842144225, "http://www.google.com/", 1.9409188468673864 ] ], [ "http://wiki.opscode.com/", [ "http://a3.twimg.com/", 0.9728799326495942, "http://api.twitter.com/", 1.2555971780349462, "http://i.creativecommons.org/", 0.9728799326495942, "http://ping.chartbeat.net/", 12.076075549446978, "http://static.chartbeat.com/", 0.9728799326495942, "http://widgets.twimg.com/", 1.3969558007276224, "http://wiki.opscode.com/", 11.716135257292972, "http://www.google-analytics.com/", 1.3969558007276224 ] ], [ "http://www.facebook.com/", [ "http://static.ak.fbcdn.net/", 1.7445163445058063 ] ], [ "http://www.google.ru/", [ "http://fonts.googleapis.com/", 0.8921294842565454, "http://i.imgur.com/", 1.0825161836716761, "http://lh4.googleusercontent.com/", 0.8921294842565454, "http://ssl.gstatic.com/", 1.4501145985202677, "http://themes.googleusercontent.com/", 0.8921294842565454, "http://www.google-analytics.com/", 1.0217551358151886, "http://www.google.com/", 2.706888606077551, "http://www.google.ru/", 19.10112330659264, "http://www.wired.com/", 1.3612089490689676, "https://plus.google.com/", 0.8921294842565454 ] ], [ "http://www.opennet.ru/", [ "http://ad.adriver.ru/", 1.548113842144225, "http://core0.node15.top.mail.ru/", 1.9409188468673864, "http://counter.yadro.ru/", 1.548113842144225, "http://top.list.ru/", 1.548113842144225, "http://www.facebook.com/", 1.3517113397826443, "http://www.ibm.com/", 2.137321349228967, "http://www.linuxcenter.ru/", 1.3517113397826443, "http://www.opennet.ru/", 7.243786410630066, "https://plusone.google.com/", 1.3517113397826443, "https://ssl.gstatic.com/", 1.3517113397826443 ] ], [ "http://www.opscode.com/", [ "http://opscode.app5.hubspot.com/", 1.9024199667196162, "http://ping.chartbeat.net/", 1.6882402353670762, "http://static.chartbeat.com/", 1.474060504014537, "http://tracking.hubspot.com/", 1.474060504014537, "http://www.google-analytics.com/", 1.6882402353670762, "http://www.opscode.com/", 5.543475399712786, "https://lct.salesforce.com/", 1.474060504014537 ] ], [ "http://www.youtube.com/", [ "http://csi.gstatic.com/", 2.2733802, "http://i1.ytimg.com/", 2.9340205999999998, "http://i2.ytimg.com/", 2.6660757186856037, "http://i3.ytimg.com/", 2.6037003999999997, "http://i4.ytimg.com/", 2.2733802, "http://pagead2.googlesyndication.com/", 2.2733802, "http://s.ytimg.com/", 2.435060378241408, "http://www.google.com/", 2.6037003999999997, "http://www.googletagservices.com/", 2.2733802, "http://www.youtube-nocookie.com/", 2.6037003999999997 ] ], [ "https://accounts.google.com/", [ "https://accounts.youtube.com/", 0.3886116033421511, "https://mail.google.com/", 0.6161823972185053, "https://ssl.google-analytics.com/", 0.4741645333708558, "https://ssl.gstatic.com/", 0.4741645333708558, "https://www.google.com/", 0.643559334827691 ] ], [ "https://docs.google.com/", [ "https://docs.google.com/", 8.549463999999997, "https://gg.google.com/", 2.2733802, "https://ssl.google-analytics.com/", 2.6037003999999997, "https://ssl.gstatic.com/", 7.2281831999999975 ] ], [ "https://mail.google.com/", [ "https://chatenabled.mail.google.com/", 1.0373421253250628, "https://feedserver-enterprise.googleusercontent.com/", 0.3886116033421511, "https://lh4.googleusercontent.com/", 1.548113842144225, "https://mail-attachment.googleusercontent.com/", 0.42214665059636675, "https://mail.google.com/", 229.2768426109602, "https://plus.google.com/", 1.3517113397826443, "https://ssl.gstatic.com/", 0.9770737733004832, "https://www-gm-opensocial.googleusercontent.com/", 1.3517113397826443, "https://www.google.com/", 0.6088648937488543 ] ], [ "https://plus.google.com/", [ "https://plus.google.com/", 3.8676237807105665, "https://ssl.gstatic.com/", 0.8921294842565451, "https://www.google.com/", 1.548113842144225 ] ], [ "https://plusone.google.com/", [ "https://plusone.google.com/", 1.548113842144225, "https://ssl.gstatic.com/", 1.548113842144225 ] ], [ "https://wiki.mirantis.com/", [ "https://ssl.google-analytics.com/", 0.8912311921823044, "https://wiki.mirantis.com/", 14.191197946240775, "https://www.google.com/", 0.4237864986621633 ] ] ],
+      "startup_list": [ 1, "http://crl.geotrust.com/", "http://fonts.googleapis.com/", "http://ocsp.thawte.com/", "http://s.ytimg.com/", "http://themes.googleusercontent.com/", "http://tools.google.com/", "http://www.google-analytics.com/", "http://www.google.com/", "http://www.gstatic.com/", "http://www.youtube.com/" ]
+   },
+   "download": {
+      "directory_upgrade": true
+   },
+   "extensions": {
+      "autoupdate": {
+         "last_check": "12964075538171129",
+         "next_check": "12964093631135191"
+      },
+      "blacklistupdate": {
+         "lastpingday": "12963999551362545",
+         "version": "0.0.0.6"
+      },
+      "chrome_url_overrides": {
+         "bookmarks": [ "chrome-extension://eemcgdkfndhakfknompkggombfjjjeno/main.html" ]
+      },
+      "settings": {
+         "hpibmhghjndideebpackbdlpncgkcppp": {
+            "blacklist": true
+         },
+         "lncjcfkpannmofmpgdfoonkniofdnaba": {
+            "blacklist": true
+         },
+         "pbglijbamgmlcpnnpbfjkbdeheejjloj": {
+            "blacklist": true
+         }
+      }
+   },
+   "google": {
+      "services": {
+         "username": ""
+      }
+   },
+   "homepage": "http://www.google.com/",
+   "homepage_is_newtabpage": true,
+   "ntp": {
+      "pref_version": 3,
+      "promo_build": 0,
+      "promo_closed": false,
+      "promo_end": 1299830340.0,
+      "promo_group": 8,
+      "promo_group_timeslice": 0,
+      "promo_line": "\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442\u0435 Chrome \u043D\u0430 \u0440\u0430\u0437\u043D\u044B\u0445 \u043A\u043E\u043C\u043F\u044C\u044E\u0442\u0435\u0440\u0430\u0445? \u0412\u043E\u0437\u044C\u043C\u0438\u0442\u0435 \u0441\u0432\u043E\u0438 \u0437\u0430\u043A\u043B\u0430\u0434\u043A\u0438 \u0438 \u0434\u0440\u0443\u0433\u0438\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438 \u0441 \u0441\u043E\u0431\u043E\u0439!",
+      "promo_resource_cache_update": "1319450950.340843",
+      "promo_start": 1299830280.0
+   },
+   "pinned_tabs": [ {
+      "url": "https://mail.google.com/mail/u/0/?shva=1#inbox/13321b1deedaf13c"
+   }, {
+      "url": "http://www.google.ru/reader/view/?hl=ru&tab=my&at=q1lWZSmnAJklhPj0Iz7lAg#stream/feed%2Fhttp%3A%2F%2Fwww.wired.com%2Fgadgetlab%2Ffeed%2F"
+   } ],
+   "plugins": {
+      "enabled_internal_pdf3": true,
+      "last_internal_directory": "/usr/lib/chromium-browser",
+      "plugins_list": [ {
+         "enabled": true,
+         "name": "Shockwave Flash",
+         "path": "/opt/Adobe/flash-player/plugin/libflashplayer.so",
+         "version": "10.3 r183"
+      }, {
+         "enabled": false,
+         "name": "Chrome NaCl",
+         "path": "/usr/lib/chromium-browser/libppGoogleNaClPluginChrome.so",
+         "version": ""
+      }, {
+         "enabled": true,
+         "name": "Java(TM) Plug-in 1.7.0",
+         "path": "/usr/lib/nsbrowser/plugins/libnpjp2.so",
+         "version": "1.7.0"
+      }, {
+         "enabled": true,
+         "name": "Default Plug-in",
+         "path": "default_plugin",
+         "version": "1"
+      }, {
+         "enabled": true,
+         "name": "Flash"
+      }, {
+         "enabled": false,
+         "name": "Chrome NaCl"
+      }, {
+         "enabled": true,
+         "name": "Java(TM) Plug-in 1.7.0"
+      }, {
+         "enabled": true,
+         "name": "Default Plug-in"
+      } ]
+   },
+   "profile": {
+      "content_settings": {
+         "pref_version": 1
+      },
+      "exited_cleanly": false,
+      "notification_allowed_sites": [ "https://mail.google.com/" ]
+   },
+   "selectfile": {
+      "last_directory": "/home/leon/Downloads"
+   },
+   "tabs": {
+      "use_compact_navigation_bar": false,
+      "use_vertical_tabs": false
+   },
+   "translate_language_blacklist": [ "en" ]
+}

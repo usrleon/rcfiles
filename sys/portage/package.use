@@ -16,3 +16,7 @@ dev-vcs/git -gtk bash-completion
 =media-libs/libpng-1.4.8 static-libs
 #required by media-gfx/splashutils-1.5.4.3-r3[truetype], required by splashutils (argument)
 >=media-libs/freetype-2.4.6 static-libs
+#required by net-print/cups-1.4.8-r1, required by www-client/google-chrome-14.0.835.126_beta99097, required by www-client/google-chrome (argument)
+=app-text/ghostscript-gpl-8.71-r6 cups
+#required by www-client/chromium-13.0.782.215, required by www-client/chromium (argument)
+=dev-libs/libxml2-2.7.8-r1 icu

@@ -1,2 +1,4 @@
 #required by skype (argument)
 >=net-im/skype-2.2.0.35-r1 skype-eula
+#required by www-client/google-chrome (argument)
+=www-client/google-chrome-14.0.835.126_beta99097 google-chrome
