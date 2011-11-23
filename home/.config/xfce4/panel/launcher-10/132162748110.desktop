@@ -1,0 +1,15 @@
+
+[Desktop Entry]
+Name=Pidgin Internet Messenger
+Name[ru]=Клиент обмена мгновенными сообщениями Pidgin
+GenericName=Internet Messenger
+GenericName[ru]=Клиент обмена мгновенными сообщениями
+Comment=Chat over IM.  Supports AIM, Google Talk, Jabber/XMPP, MSN, Yahoo and more
+Comment[ru]=Переписка мгновенными сообщениями.  Поддерживает AIM, Google Talk, Jabber/XMPP, MSN, Yahoo и не только
+Exec=pidgin
+Icon=pidgin
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=Network;InstantMessaging;
+X-XFCE-Source=file:///usr/share/applications/pidgin.desktop

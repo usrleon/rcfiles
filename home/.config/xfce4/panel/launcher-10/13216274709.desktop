@@ -1,0 +1,10 @@
+
+[Desktop Entry]
+Name=Skype VoIP
+Type=Application
+Comment=A P2P-VoiceIP client.
+Exec=skype
+TryExec=skype
+Icon=skype
+Categories=Network;InstantMessaging;Telephony;
+X-XFCE-Source=file:///usr/share/applications/skype-skype.desktop

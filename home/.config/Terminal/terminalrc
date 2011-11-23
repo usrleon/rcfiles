@@ -18,4 +18,5 @@ MiscHighlightUrls=TRUE
 FontName=Monospace 11
 ShortcutsNoMenukey=TRUE
 ShortcutsNoMnemonics=TRUE
+TitleMode=TERMINAL_TITLE_REPLACE
 
